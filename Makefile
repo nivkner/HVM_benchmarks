@@ -2,7 +2,7 @@ HVM := hvm
 GHC := ghc
 CARGO := cargo
 HYPERFINE := hyperfine
-MAX_THREADS := 2
+MAX_THREADS := $(shell nproc)
 THREAD_COUNTS := $(shell seq 1 $(MAX_THREADS))
 PARAMS := 20
 
